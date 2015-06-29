@@ -1,0 +1,14 @@
+<% description = "" %>
+<h1 class="text-center">Jobs listing</h1>
+
+
+<% @jobs.each_slice(2) do |jobs_group|   %>
+	<div class="row">
+		<% jobs_group.each do |job| %>
+			<div class="col-md-6">
+				<%= render 'job', {job: job, description: description} %>
+			</div>
+
+		<% end -%>
+	</div>
+<% end -%>

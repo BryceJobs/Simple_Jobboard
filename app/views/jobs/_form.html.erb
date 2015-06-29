@@ -1,0 +1,13 @@
+<%= simple_form_for @job do |f| %>
+<%= f.error_notification %>
+	<div class="form_inputs">
+		<%= f.association :category %>
+		<%= f.input :title, required: true %>
+		<%= f.input :company %>
+		<%= f.input :description %>
+		<%= f.input :salary %>
+	</div>
+	<div class="form_buttons">
+		<%= f.button :submit %>
+	</div>
+<% end -%>
